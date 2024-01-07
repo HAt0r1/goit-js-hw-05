@@ -1,12 +1,21 @@
+// first approach
+
 const getUserNames = (users) => {
-  const nameArray = [];
-  users.forEach((user) => {
-    if (user.name) {
-      nameArray.push(user.name);
-    }
-  });
+  const nameArray = users.map((user) => user.name);
   return nameArray;
 };
+
+// second approach
+
+// const getUserNames = (users) => {
+//   const nameArray = [];
+//   users.forEach((user) => {
+//     if (user.name) {
+//       nameArray.push(user.name);
+//     }
+//   });
+//   return nameArray;
+// };
 
 console.log(
   getUserNames([
