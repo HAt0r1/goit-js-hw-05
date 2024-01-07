@@ -1,13 +1,22 @@
+// first approach
+
 const getUsersWithFriend = (users, friendName) => {
-  const finalArray = [];
-  users.forEach((user) => {
-    if (user.friends.includes(friendName)) {
-      finalArray.push(user);
-      return finalArray;
-    }
-  });
-  return finalArray;
+  const friendArray = users.filter((user) => user.friends.includes(friendName));
+  return friendArray;
 };
+
+// second approach
+
+// const getUsersWithFriend = (users, friendName) => {
+//   const finalArray = [];
+//   users.forEach((user) => {
+//     if (user.friends.includes(friendName)) {
+//       finalArray.push(user);
+//       return finalArray;
+//     }
+//   });
+//   return finalArray;
+// };
 
 const allUsers = [
   {
